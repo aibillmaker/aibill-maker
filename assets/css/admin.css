@@ -1,0 +1,87 @@
+.aibill-admin-wrap { max-width: 1240px; }
+.aibill-admin-head { align-items: center; background: #fff; border: 1px solid #dcdcde; border-radius: 14px; display: flex; justify-content: space-between; margin: 18px 0; padding: 22px; }
+.aibill-admin-head h1 { margin: 0 0 6px; }
+.aibill-admin-head p { color: #50575e; font-size: 15px; margin: 0; }
+.aibill-head-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.aibill-card { background: #fff; border: 1px solid #dcdcde; border-radius: 14px; box-shadow: 0 1px 2px rgba(0,0,0,.04); margin: 18px 0; padding: 20px; }
+.aibill-card h2 { margin-top: 0; }
+.aibill-card-head { align-items: flex-start; display: flex; justify-content: space-between; gap: 16px; }
+.aibill-card-head.inline { align-items: center; }
+.aibill-card-head p { color: #646970; margin-top: 4px; }
+.aibill-list-card { overflow-x: auto; }
+.aibill-invoice-list th:last-child, .aibill-invoice-list td:last-child { min-width: 230px; }
+.aibill-row-actions { white-space: nowrap; }
+.aibill-row-actions span { color: #8c8f94; margin: 0 4px; }
+.aibill-grid-2 { display: grid; gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.aibill-edit-form input[type="text"], .aibill-edit-form input[type="email"], .aibill-edit-form input[type="date"], .aibill-edit-form input[type="number"], .aibill-edit-form textarea, .aibill-edit-form select { box-sizing: border-box; max-width: 100%; width: 100%; }
+.aibill-edit-form textarea { min-height: 74px; }
+.aibill-items-edit input { min-width: 88px; }
+.aibill-items-edit input.regular-text { min-width: 180px; }
+.aibill-view-actions { margin: 14px 0; }
+.aibill-modal[hidden] { display: none; }
+.aibill-modal { bottom: 0; left: 0; position: fixed; right: 0; top: 0; z-index: 100000; }
+.aibill-modal-backdrop { background: rgba(0,0,0,.48); bottom: 0; left: 0; position: absolute; right: 0; top: 0; }
+.aibill-modal-panel { background: #fff; border-radius: 18px; box-shadow: 0 30px 80px rgba(0,0,0,.35); box-sizing: border-box; left: 50%; max-height: calc(100vh - 60px); max-width: 900px; overflow: auto; padding: 26px; position: absolute; top: 30px; transform: translateX(-50%); width: calc(100vw - 40px); }
+.aibill-modal-close { background: transparent; border: 0; color: #50575e; cursor: pointer; font-size: 30px; line-height: 1; padding: 4px 10px; position: absolute; right: 14px; top: 12px; }
+.aibill-modal-panel h2 { font-size: 24px; margin: 0 44px 8px 0; }
+.aibill-modal-panel p { color: #50575e; font-size: 14px; }
+.aibill-modal-panel textarea { box-sizing: border-box; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14px; line-height: 1.55; min-height: 210px; padding: 14px; resize: vertical; width: 100%; }
+.aibill-form-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+.aibill-helper-grid { display: grid; gap: 10px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 12px; }
+.aibill-helper-grid span { background: #f6f7f7; border: 1px solid #dcdcde; border-radius: 10px; color: #3c434a; padding: 10px; }
+.aibill-message { border-radius: 10px; margin-top: 14px; padding: 12px; }
+.aibill-message.is-info { background: #f0f6fc; border: 1px solid #72aee6; color: #0a4b78; }
+.aibill-message.is-success { background: #edfaef; border: 1px solid #68de7c; color: #14532d; }
+.aibill-message.is-error { background: #fcf0f1; border: 1px solid #ff8085; color: #8a2424; }
+.aibill-generated-result { border-top: 1px solid #dcdcde; margin-top: 18px; padding-top: 18px; }
+.aibill-generated-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+.aibill-pill { background: #eef2ff; border-radius: 999px; color: #3730a3; display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .04em; padding: 5px 10px; text-transform: uppercase; }
+.aibill-invoice-card { background: #fff; border: 1px solid #dcdcde; border-radius: 18px; box-shadow: 0 2px 14px rgba(0,0,0,.06); box-sizing: border-box; color: #1d2327; margin: 20px 0; max-width: 980px; padding: 28px; }
+.aibill-print-actions { display: flex; gap: 8px; justify-content: flex-end; margin-bottom: 16px; }
+.aibill-btn { align-items: center; border: 0; border-radius: 8px; cursor: pointer; display: inline-flex; font-weight: 700; gap: 6px; padding: 10px 14px; text-decoration: none; }
+.aibill-btn-primary { background: #2271b1; color: #fff; }
+.aibill-btn-soft { background: #f0f0f1; color: #1d2327; }
+.aibill-invoice-head { align-items: center; border-bottom: 1px solid #dcdcde; display: flex; gap: 18px; justify-content: space-between; padding-bottom: 20px; }
+.aibill-invoice-head h2 { font-size: 28px; margin: 8px 0 5px; }
+.aibill-invoice-head p { color: #646970; margin: 0; }
+.aibill-total-badge { background: #f6f7f7; border: 1px solid #dcdcde; border-radius: 14px; min-width: 190px; padding: 16px; text-align: right; }
+.aibill-total-badge span { color: #646970; display: block; font-size: 12px; text-transform: uppercase; }
+.aibill-total-badge strong { display: block; font-size: 24px; margin-top: 4px; }
+.aibill-two-col, .aibill-notes-grid { display: grid; gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px; }
+.aibill-two-col > div, .aibill-notes-grid > div { background: #fbfbfc; border: 1px solid #e5e7eb; border-radius: 14px; padding: 16px; }
+.aibill-two-col h3, .aibill-notes-grid h3 { margin: 0 0 10px; }
+.aibill-two-col p { margin: 5px 0; }
+.aibill-two-col span { color: #646970; }
+.aibill-meta-grid { display: grid; gap: 12px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 18px; }
+.aibill-meta-grid div { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px; }
+.aibill-meta-grid span { color: #646970; display: block; font-size: 12px; text-transform: uppercase; }
+.aibill-meta-grid b { display: block; margin-top: 4px; }
+.aibill-items-table { border-collapse: collapse; margin-top: 22px; width: 100%; }
+.aibill-items-table th, .aibill-items-table td { border-bottom: 1px solid #dcdcde; padding: 12px 10px; text-align: left; vertical-align: top; }
+.aibill-items-table th { background: #f6f7f7; font-size: 12px; letter-spacing: .03em; text-transform: uppercase; }
+.aibill-items-table small { color: #646970; display: block; margin-top: 4px; }
+.aibill-summary { margin-left: auto; margin-top: 20px; max-width: 360px; }
+.aibill-summary div { display: flex; justify-content: space-between; padding: 8px 0; }
+.aibill-summary .aibill-grand { border-top: 2px solid #1d2327; font-size: 18px; margin-top: 6px; padding-top: 12px; }
+.aibill-print-body { background: #f6f7f7; margin: 0; padding: 24px; }
+.aibill-print-body .aibill-invoice-card { margin: 0 auto; }
+.aibill-print-toolbar { display: flex; gap: 10px; justify-content: center; margin-bottom: 18px; }
+.aibill-print-toolbar button { cursor: pointer; padding: 10px 16px; }
+@media (max-width: 782px) {
+  .aibill-admin-head, .aibill-invoice-head { align-items: stretch; flex-direction: column; }
+  .aibill-grid-2, .aibill-two-col, .aibill-notes-grid, .aibill-meta-grid, .aibill-helper-grid { grid-template-columns: 1fr; }
+  .aibill-total-badge { text-align: left; }
+  .aibill-card-head { flex-direction: column; }
+}
+@media print {
+  body { background: #fff !important; }
+  .no-print, #adminmenumain, #wpadminbar, #wpfooter, .notice, .update-nag { display: none !important; }
+  #wpcontent, #wpbody-content { margin: 0 !important; padding: 0 !important; }
+  .wrap { margin: 0 !important; }
+  .aibill-invoice-card { border: 0; box-shadow: none; margin: 0 auto; max-width: none; padding: 0; }
+  .aibill-print-body { background: #fff; padding: 0; }
+}
+
+.aibill-provider-help {
+  max-width: 980px;
+}
