@@ -1,0 +1,56 @@
+name: Publish to WordPress.org SVN
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Publish plugin files
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout GitHub code
+        uses: actions/checkout@v4
+
+      - name: Install SVN tools
+        run: sudo apt-get update && sudo apt-get install -y subversion rsync
+
+      - name: Checkout WordPress.org SVN
+        run: |
+          svn checkout https://plugins.svn.wordpress.org/aibill-maker svn-repo \
+            --username "${{ secrets.SVN_USERNAME }}" \
+            --password "${{ secrets.SVN_PASSWORD }}" \
+            --non-interactive \
+            --trust-server-cert
+
+      - name: Copy plugin files to SVN trunk and tag
+        run: |
+          mkdir -p svn-repo/trunk
+          rm -rf svn-repo/trunk/*
+
+          rsync -av --delete \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='svn-repo' \
+            --exclude='.gitignore' \
+            --exclude='.gitattributes' \
+            ./ svn-repo/trunk/
+
+          mkdir -p svn-repo/tags/1.0.0
+          rm -rf svn-repo/tags/1.0.0/*
+
+          rsync -av --delete svn-repo/trunk/ svn-repo/tags/1.0.0/
+
+          cd svn-repo
+          svn add --force trunk tags
+          svn status | awk '/^!/ {print $2}' | xargs -r svn delete --force
+          svn status
+
+      - name: Commit to WordPress.org SVN
+        run: |
+          cd svn-repo
+          svn commit -m "Initial release 1.0.0" \
+            --username "${{ secrets.SVN_USERNAME }}" \
+            --password "${{ secrets.SVN_PASSWORD }}" \
+            --non-interactive \
+            --trust-server-cert
